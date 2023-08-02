@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modal Popup | HBProg</title>
+</head>
+<body>
+    <button type="button"  onclick="toggleModal()" >Show Popup</button>
+    <div class="modal-background" onclick="toggleModal()"></div>
+    <div class="modal">
+        <h2>Modal Window</h2>
+        <p>
+            The modal was opened. They are awesome for displaying critical info or for confirmations
+        </p>
+    </div>
+    <script>
+        const toggleModal=()=>{
+            const bodyClassList=document.body.classList;
+            if(bodyClassList.contains("open")){
+                bodyClassList.remove("open");
+                bodyClassList.add("closed");
+            }
+            else{
+                bodyClassList.remove("closed");
+                bodyClassList.add("open");
+            }
+        }
+    </script>
+</body>
+</html>
